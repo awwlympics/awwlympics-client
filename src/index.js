@@ -1,18 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+
 import App from './App';
+
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
 
-function rootReducer() {
-    return {
-        currentState: "Hello"
-    }
-}
+//Reducers
+import formReducer from './reducers/formReducer';
 
+//Styles
+import './index.css';
 
-const store = createStore(rootReducer);
+const reducers = combineReducers({
+    form: formReducer
+});
+
+const store = createStore(reducers);
 
 ReactDOM.render(<Provider store={store}>
                     <App />
