@@ -1,10 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 import { Container, Col, Row } from "reactstrap";
-
-const StyledFooter = styled.footer`
-  background: ;
-`;
+import { Link } from "react-router-dom";
 
 const Footer = props => {
   return (
@@ -12,23 +8,23 @@ const Footer = props => {
       <Container fluid className="">
         <Row className="">
           <Col xs="12" md="6" className="text-center text-md-left">
-            <a href="#" className="text-light mr-3">
+            <a href="https://twitter.com/?lang=en" className="text-light mr-3">
               <i className="fab fa-twitter fa-lg" />
             </a>
-            <a href="#" className="text-light mr-3">
+            <a href="https://www.instagram.com/" className="text-light mr-3">
               <i className="fab fa-facebook-f fa-lg" />
             </a>
-            <a href="#" className="text-light">
+            <a href="https://www.facebook.com/" className="text-light">
               <i className="fab fa-instagram fa-lg" />
             </a>
           </Col>
           <Col xs="12" className="text-center text-md-right" md="6">
-            <a href="#" className="text-light mr-3">
+            <Link to="/terms-of-service" className="text-light mr-3">
               Terms of Service
-            </a>
-            <a href="#" className="text-light">
+            </Link>
+            <Link to="privacy-policy" className="text-light">
               Privacy Policy
-            </a>
+            </Link>
           </Col>
         </Row>
       </Container>

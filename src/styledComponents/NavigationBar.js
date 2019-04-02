@@ -8,6 +8,7 @@ export const BrandImage = styled.img`
 export const StyledNavItem = styled(NavItem)`
   &&& {
     width: max-content;
+    cursor: pointer;
     .nav-link {
       color: rgba(245, 245, 245, 0.9);
       &.active {
