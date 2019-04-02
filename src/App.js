@@ -1,14 +1,13 @@
 import React, { Component } from "react";
-import SignUp from "./components/SignUp";
-import NavigationBar from "./components/NavigationBar";
-import Footer from "./components/Footer";
+import { Footer, NavigationBar, SignUp } from "./components";
+import { Route } from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <NavigationBar />
-        <SignUp />
+        <Route path="/signup" exact render={props => <SignUp {...props} />} />
         <Footer />
       </div>
     );
